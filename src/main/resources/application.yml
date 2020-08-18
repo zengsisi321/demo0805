@@ -1,0 +1,36 @@
+server:
+  port: 8080
+spring:
+  #redis
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
+#数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clearday?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&tinyInt1isBit=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+#图片路径
+  mvc:
+    static-path-pattern: /image/**
+  resources:
+    static-locations: file:D://image/
+
+#mybatis
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.demo
+
+#开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
