@@ -5,8 +5,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
- * @author lh
- * @data 2020-6-18
+ * swagger
+ * @author 99200
  */
 @Configuration
 public class StaticWebResourcesConfig extends WebMvcConfigurationSupport {

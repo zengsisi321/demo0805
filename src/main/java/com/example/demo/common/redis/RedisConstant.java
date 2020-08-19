@@ -1,5 +1,6 @@
 package com.example.demo.common.redis;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -7,6 +8,7 @@ import lombok.Data;
  * @author 99200
  */
 @Data
+@AllArgsConstructor
 public class RedisConstant {
 
     /**

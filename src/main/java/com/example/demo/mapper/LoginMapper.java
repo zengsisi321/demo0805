@@ -12,10 +12,10 @@ public interface LoginMapper extends BaseMapper<User> {
 
     /**
      * 查询用户名是否存在
-     * @param userName
+     * @param userAccount
      * @return
      */
-    User selectByUserName(String userName);
+    User selectByUserName(String userAccount);
 
     /**
      * 查询用户手机号是否存在

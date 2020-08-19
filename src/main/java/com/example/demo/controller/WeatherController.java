@@ -45,7 +45,7 @@ public class WeatherController {
     @ApiOperation("定位")
     public Result getLocation(HttpServletRequest request){
         String ip = IpUtils.getIpAddr(request);
-        return Result.ok(WeatherUtil.sas(ip));
+        return Result.ok(WeatherUtil.gainIp(ip));
     }
 
 }

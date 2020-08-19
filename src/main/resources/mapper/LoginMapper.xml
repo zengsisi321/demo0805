@@ -5,7 +5,6 @@
     <!--@mbg.generated-->
     <!--@Table `user`-->
     <id column="user_id" property="userId"/>
-    <result column="user_name" property="userName"/>
     <result column="user_account" property="userAccount"/>
     <result column="user_phone" property="userPhone"/>
     <result column="user_password" property="userPassword"/>
@@ -14,14 +13,14 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    user_id, user_name, user_account, user_phone, user_password, user_mail, user_time
+    user_id,user_account, user_phone, user_password, user_mail, user_time
   </sql>
 
   <select id="selectByUserName" resultMap="BaseResultMap">
     SELECT *
     FROM USER
     WHERE user_delete = 0
-      AND user_name = #{userName}
+      AND user_account = #{userAccount}
   </select>
 
   <select id="selectByPhone" resultMap="BaseResultMap">

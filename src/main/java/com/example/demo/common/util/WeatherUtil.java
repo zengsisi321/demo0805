@@ -59,8 +59,12 @@ public class WeatherUtil {
         return JSONObject.parseObject(json);
     }
 
-
-    public static JSONObject sas(String ip){
+    /**
+     * 获取ip
+     * @param ip
+     * @return
+     */
+    public static JSONObject gainIp(String ip){
 
         String url = "http://api.map.baidu.com/location/ip?ak=KEY&ip=IP&coor=bd09ll"
             .replace("IP", ip)
